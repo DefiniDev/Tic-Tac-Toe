@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="flex-container">
+      <h1>Tic-Tac-Toe</h1>
+    </div>
+    <div id="game-board" class="grid-container">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+    <div id="flex-container">
+      <div id="game-finish" class="hidden"></div>
+    </div>
+    <div id="btns-top" class="flex-container">
+      <input
+        id="btn-vs-human"
+        class="active-game"
+        type="button"
+        value="Play VS Human"
+      />
+      <input id="btn-vs-random" class="" type="button" value="Play VS Random" />
+    </div>
+    <div id="btns-bottom" class="flex-container">
+      <input id="btn-vs-comp" class="" type="button" value="Play VS Computer" />
+    </div>
+  </body>
+</html>

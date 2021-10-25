@@ -1,0 +1,160 @@
+/* Fonts */
+@font-face {
+  font-family: "epicslashregular";
+  src: url("/img/epicslash-webfont.woff2") format("woff2"),
+    url("/img/epicslash-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(252, 252, 252);
+  font-size: 10px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+}
+
+h1 {
+  width: 100%;
+  font-family: "epicslashregular", Impact, Haettenschweiler, sans-serif;
+  font-size: 100px;
+  color: #222;
+  margin: 30px 0 20px 0;
+  text-align: center;
+}
+
+#game-board {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(252, 252, 252);
+  margin: auto;
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
+  border-top: 4px solid #222;
+  border-left: 4px solid #222;
+}
+
+#game-board div {
+  font-family: "epicslashregular", Impact, Haettenschweiler, sans-serif;
+  font-size: 120px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid #222;
+  border-right: 4px solid #222;
+  justify-content: center;
+  text-align: center;
+}
+
+#game-board div:hover {
+  background-color: lightgray;
+}
+
+.playerX,
+.playerO {
+  cursor: not-allowed;
+}
+
+#btns-top {
+  margin: 30px auto 0 auto;
+  justify-content: center;
+}
+
+#btns-bottom {
+  justify-content: center;
+}
+
+#btn-vs-human {
+  margin-right: 20px;
+}
+
+#btn-vs-random {
+  margin-left: 20px;
+}
+
+#btn-vs-comp {
+  margin-top: 30px;
+}
+
+input:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+input {
+  transition: transform 0.2s ease-in-out;
+  font-size: 40px;
+  font-family: "epicslashregular", Impact, Haettenschweiler, sans-serif;
+  border-radius: 0;
+  border: 3px solid #222;
+  padding: 10px;
+}
+
+.active-game {
+  color: white;
+  background-color: black;
+}
+
+#game-finish {
+  width: 500px;
+  position: absolute;
+  background-color: white;
+  font-size: 6rem;
+  font-family: "epicslashregular", Impact, Haettenschweiler, sans-serif;
+  border: 3px solid #222;
+  left: 50%;
+  top: 35%;
+  padding: 2.5rem;
+  transform: translate(-50%, 0);
+  text-align: center;
+  z-index: 2;
+  transition: opacity 0.6s linear;
+}
+
+.hidden {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 606px) {
+  h1 {
+    margin: 60px 0 50px 0;
+  }
+
+  #game-board {
+    width: 490px;
+    height: 490px;
+  }
+
+  #btns-top {
+    width: 500px;
+    margin: 30px auto 0 auto;
+    justify-content: center;
+  }
+
+  #btn-vs-human {
+    margin-right: 20px;
+  }
+
+  #btn-vs-random {
+    margin-left: 20px;
+  }
+
+  input {
+    font-size: 30px;
+  }
+}
